@@ -41,3 +41,24 @@ for _ in range(t):
 
     res = dp[0]
     print(n-res)
+#Normal 1d dp
+# import sys
+# input = sys.stdin.readline
+
+# t = int(input())
+# for _ in range(t):
+#     n = int(input())
+#     a = list(map(int, input().split()))
+
+#     dp = [0] * (n + 1)  # dp[n] = 0
+
+#     for i in range(n - 1, -1, -1):
+#         # Option 1: delete a[i]
+#         dp[i] = dp[i + 1]
+
+#         # Option 2: keep block starting at i
+#         if i + a[i] < n:
+#             dp[i] = max(dp[i], a[i] + 1 + dp[i + a[i] + 1])
+
+#     # minimum deletions = total - kept
+#     print(n - dp[0])
